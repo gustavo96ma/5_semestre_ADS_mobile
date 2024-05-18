@@ -9,26 +9,10 @@ class PaginaListaDeChats extends StatefulWidget {
 }
 
 class _PaginaListaDeChatsState extends State<PaginaListaDeChats> {
-  void adicionaChat() {
-    listaChats.add(
-      Chat(
-        nome: '5º SEMESTRE ADS',
-        mensagens: {'conteudo': 'Olá, seja bem-vindo!'},
-      ),
-    );
-    listaChats.add(
-      Chat(
-        nome: '5º SEMESTRE ESW',
-        mensagens: {'conteudo': 'Olá Joelma! Quer um tacacá?'},
-      ),
-    );
-  }
-
   final List<Chat> listaChats = [];
 
   @override
   Widget build(BuildContext context) {
-    adicionaChat();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
@@ -57,11 +41,4 @@ class _PaginaListaDeChatsState extends State<PaginaListaDeChats> {
       ),
     );
   }
-}
-
-class Chat {
-  final String nome;
-  final Map<String, String> mensagens;
-
-  Chat({required this.nome, required this.mensagens});
 }
