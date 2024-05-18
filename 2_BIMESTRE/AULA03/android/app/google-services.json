@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "802615696691",
+    "project_id": "unicv-chat-ads",
+    "storage_bucket": "unicv-chat-ads.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802615696691:android:d3456538d80c9473d93246",
+        "android_client_info": {
+          "package_name": "com.example.tela_login2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXweU-CyeROSVaC4FXRzKIPy9Jws1Qoog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
