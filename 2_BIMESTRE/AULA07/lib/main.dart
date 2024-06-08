@@ -12,7 +12,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(const MeuApp());
-  // await FirebaseMessaging.instance.setAutoInitEnabled(true);
+  await FirebaseMessaging.instance.setAutoInitEnabled(true);
   // TODO: lembrar de descomentar quando for versao final
 }
 

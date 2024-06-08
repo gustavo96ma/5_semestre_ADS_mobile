@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -12,6 +13,21 @@ class PaginaListaDeChats extends StatefulWidget {
 }
 
 class _PaginaListaDeChatsState extends State<PaginaListaDeChats> {
+  
+  void configuraNotificacoes(listaChats, usuarioAutenticado)async {
+    final firebaseMessageria = FirebaseMessaging.instance;
+    await firebaseMessageria.requestPermission();
+
+    for (var documento in listaChats){
+      for (var email in documento['usuarios']){
+        if (email == usuarioAutenticado.email){
+          firebaseMessageria.subscribeToTopic(documento.id);
+        }
+      }
+    }
+
+  }
+
   // mudar regras de uso do firestore no firebase console
   @override
   Widget build(BuildContext context) {
@@ -41,6 +57,8 @@ class _PaginaListaDeChatsState extends State<PaginaListaDeChats> {
           }
 
           final listaChats = snapshot.data!.docs;
+
+          configuraNotificacoes(listaChats, usuarioAutenticado);
 
           return Scaffold(
             appBar: AppBar(

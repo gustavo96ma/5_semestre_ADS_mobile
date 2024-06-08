@@ -13,5 +13,6 @@ exports.myFunction = functions.firestore
               body: snapshot.data()["conteudo"],
               clickAction: "FLUTTER_NOTIFICATION_CLICK",
             },
-          });
+          }
+        );
     });
