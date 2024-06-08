@@ -1,0 +1,1 @@
+ /home/gustavo/Documents/desenvolvimento/aulas/aulas-flutter/2024/5_ADS_MOBILE/2_BIMESTRE/AULA04/.dart_tool/flutter_build/0a0de01e119a8e6cd4fb32bf4aaee5c7/native_assets.yaml: 
